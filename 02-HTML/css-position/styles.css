@@ -1,0 +1,116 @@
+* {
+    font-size: 40px;
+    color: white;
+    margin: 0;
+  }
+  
+  .parent {
+    background-color: orange;
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .child-one {
+    background-color: green;
+    position: relative;
+    top: 10px;
+  }
+  
+  .child-two {
+    background-color: purple;
+  }
+  
+  .child-three {
+    background-color: blue;
+  }
+
+  hide first flags on hoover to reveal second flag underneath
+  
+  .flag-one:hover{
+    opacity: 0;
+  }
+
+  .flag-two:hover{
+    opacity: 0;
+  }
+
+.flag-one{
+    padding: 100px;
+
+    
+}
+.flag-two{
+    padding: 100px;
+    border-width: 5px;
+    width: 700px;
+    border-color: black;
+    position:absolute;
+}
+.flag-three{
+    padding: 100px;
+}
+.flag-four{
+    padding: 100px;
+}
+
+  .flag-one .line-one{
+      background-color: blue;
+      height: 80px;
+      
+  }
+  .flag-one .line-two{
+    background-color: white;
+    height: 80px;
+}
+.flag-one .line-three{
+    background-color: red;
+    height: 80px;
+}
+
+.flag-two .line-one{
+    background-color: yellow;
+    height: 80px;
+}
+.flag-two .line-two{
+  background-color: black;
+  height: 80px;
+}
+.flag-two .line-three{
+  background-color: red;
+  height: 80px;
+}
+
+.flag-three .line-one{
+    background-color: blue;
+    display: inline;
+}
+.flag-three .line-two{
+  background-color: white;
+  display: inline;
+}
+.flag-three .line-three{
+  background-color: red;
+  display: inline;
+  height: 30px;
+
+}
+
+.flag-four .line-one{
+  background-color: blue;
+  inline-size: 10cm;
+}
+.flag-four .line-two{
+background-color: white;
+}
+.flag-four .line-three{
+background-color: red;
+}
+
+position static   
+position relative from its container
+position absalute where it is in world space
+                  if parent is relative and child is absulte end result will be relative
+position fixed    moves with page when scrolled
+                  places in screen space
+position sticky   static and relative until pushed by
+                  then behaves like fixed 
