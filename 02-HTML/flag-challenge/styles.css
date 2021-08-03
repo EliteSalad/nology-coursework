@@ -1,0 +1,30 @@
+* {
+    font-size: 40px;
+    color: white;
+    margin: 0;
+  }
+  
+  .flag-1:hover
+  {
+
+  }
+  div
+  {
+
+  }
+  body
+  {
+    display: flex;
+    flex-wrap: nowrap;
+    
+  }
+
+
+position static   
+position relative from its container
+position absalute where it is in world space
+                  if parent is relative and child is absulte end result will be relative
+position fixed    moves with page when scrolled
+                  places in screen space
+position sticky   static and relative until pushed by
+                  then behaves like fixed 
