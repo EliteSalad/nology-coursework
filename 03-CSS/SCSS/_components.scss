@@ -1,0 +1,99 @@
+.navigation
+{
+    height: 10vh;
+    background: $color-primary;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between ;
+    align-content: center;
+}
+
+.logo
+{
+    font-family: $font-display;
+    font-size: 0 20px;
+    color: $color-white;
+}
+
+.button 
+{
+    display: block;
+    width: 100px;
+    background-color: $color-secondary;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: $color-white;
+
+    
+}
+
+
+//intro block
+.intro
+{
+      
+    text-align: center;
+    align-items: center;
+
+    &__heading{
+        color: $color-primary;
+        font-size:  50px;
+    }
+
+    &__sub-heading{
+        font-family: $font-display;
+        font-size: 25px;
+        margin: 20px 0;
+    }
+
+    &__button{
+        margin: 0 auto;
+    }
+}
+
+.wave{
+    vertical-align: top;
+}
+
+.form{
+    background-color: $color-white;
+    padding: 20px;
+    border-radius: 10px;
+    border: white;
+    display: flex;
+    flex-direction: column;
+    
+    &__input
+    {
+        margin-bottom: 20px;
+    }
+
+    &__button
+    {
+        width: 100%;
+        background-color: $color-primary-light;
+    }
+}
+
+.outro
+{
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+    &__heading{
+        font-family: $font-display;
+
+    }
+
+    &__button
+    {
+        margin: 0 auto;
+        width:auto;
+        background-color: $color-white;
+        border: solid $color-primary 2px;
+        color:$color-primary;
+    }
+}

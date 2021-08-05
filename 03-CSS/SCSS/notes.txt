@@ -1,0 +1,15 @@
+https://docs.google.com/document/d/18ZDjeSR1jeI95IukxmuXdEIqgQwvt3keu3J7PniI710/edit
+complete code: https://codepen.io/charlie-robin/pen/QWdpygd
+look at display elements inline vs block
+border radius for curved buttons
+SCSS guy very quiet
+to see element being worked on (border: 2px solid red;)
+vh for visual height percentile to get whole page as desired 
+When they hit save it auto compiles scss?
+margin: 0 auto; way to center block level elements
+
+the full scss architecture 
+
+doing button how I did it good practice
+
+encapsulation and reusable code for webdevelopment

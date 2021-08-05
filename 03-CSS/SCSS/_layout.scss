@@ -1,0 +1,25 @@
+
+.header{
+
+    height: 70vh;
+    display: flex;
+    background-color: $color-white;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    height: 50vh;
+    display: flex;
+    background-color: $color-primary;
+    justify-content:  center;
+    align-items: center;
+}
+
+.footer{
+     height: 50vh;
+     display: flex;
+     background-color: $color-white;
+     justify-content: center;
+     align-items: center;
+}

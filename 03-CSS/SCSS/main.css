@@ -10,3 +10,106 @@
 a:link, a:visited {
   text-decoration: none;
 }
+
+.navigation {
+  height: 10vh;
+  background: #28527a;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.logo {
+  font-family: "Dancing Script", cursive;
+  font-size: 0 20px;
+  color: #fafafa;
+}
+
+.button {
+  display: block;
+  width: 100px;
+  background-color: #f0a500;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fafafa;
+}
+
+.intro {
+  text-align: center;
+  align-items: center;
+}
+.intro__heading {
+  color: #28527a;
+  font-size: 50px;
+}
+.intro__sub-heading {
+  font-family: "Dancing Script", cursive;
+  font-size: 25px;
+  margin: 20px 0;
+}
+.intro__button {
+  margin: 0 auto;
+}
+
+.wave {
+  vertical-align: top;
+}
+
+.form {
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+  border: white;
+  display: flex;
+  flex-direction: column;
+}
+.form__input {
+  margin-bottom: 20px;
+}
+.form__button {
+  width: 100%;
+  background-color: #55a5f0;
+}
+
+.outro {
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.outro__heading {
+  font-family: "Dancing Script", cursive;
+}
+.outro__button {
+  margin: 0 auto;
+  width: auto;
+  background-color: #fafafa;
+  border: solid #28527a 2px;
+  color: #28527a;
+}
+
+.header {
+  height: 70vh;
+  display: flex;
+  background-color: #fafafa;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  height: 50vh;
+  display: flex;
+  background-color: #28527a;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  height: 50vh;
+  display: flex;
+  background-color: #fafafa;
+  justify-content: center;
+  align-items: center;
+}
