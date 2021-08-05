@@ -13,21 +13,17 @@ nav {
 section {
   width: 100%;
 }
-
 section div {
   width: 33%;
   height: 100px;
   display: inline-block;
 }
-
 section div:nth-child(1) {
   background-color: red;
 }
-
 section div:nth-child(2) {
   background-color: green;
 }
-
 section div:nth-child(3) {
   background-color: blue;
 }
@@ -37,5 +33,3 @@ section div:nth-child(3) {
     width: 100%;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */
