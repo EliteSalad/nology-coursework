@@ -1,2 +1,5 @@
 compile hero auto compile and build
 div:nth-child(1) //class, child to interact with (starts from 1 not 0)
+
+Grid Templates Area
+https://css-tricks.com/simple-named-grid-areas/
