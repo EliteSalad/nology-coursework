@@ -1,0 +1,12 @@
+    rel="stylesheet"
+    href="https://cdn.jsdeliver.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+    crossorigin="anonymous"
+    
+        <!-- 
+        xs:0
+        sm: 576px
+        md: 768px
+        lg: 992px;
+        xl: 1200px
+     -->
