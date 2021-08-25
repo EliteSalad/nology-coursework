@@ -1,0 +1,1 @@
+{"version":3,"sources":["_layout.scss"],"names":[],"mappings":"AAAA,EACE,WAAY,WAGd,KACE,iBAAkB,QAClB,QAAS,KACT,YAAa","file":"_layout.min.css","sourcesContent":["\r\n* {\r\n    box-sizing: border-box;\r\n  }\r\n  \r\n  body {\r\n    background-color: #f1f1f1;\r\n    padding: 20px;\r\n    font-family: Arial;\r\n  }\r\n  "]}
