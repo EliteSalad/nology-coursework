@@ -14,13 +14,42 @@
 </head>
 <body>
 <div class="sub-div">
+
+<div class="skills row">
+  <div class="col-lg-4 col-md-6 col-sm-12 card">
+    <img src="blog-thumbnail.jpg" alt="Skill Thumbnail" style="width:40%">
+    <h4>Web Development</h4>
+  </div>
+  <div class="col-lg-4 col-md-6 col-sm-12 card">
+    <img src="blog-thumbnail.jpg" alt="Skill Thumbnail" style="width:40%">
+    <h4>C# & C++</h4>
+  </div>
+  <div class="col-lg-4 col-md-6 col-sm-12 card">
+    <img src="blog-thumbnail.jpg" alt="Skill Thumbnail" style="width:40%">
+    <h4>Unity</h4>
+  </div>
+  <div class="col-lg-4 col-md-6 col-sm-12 card">
+    <img src="blog-thumbnail.jpg" alt="Skill Thumbnail" style="width:40%">
+    <h4>SQL</h4>
+  </div>
+  <div class="col-lg-4 col-md-6 col-sm-12 card">
+    <img src="blog-thumbnail.jpg" alt="Skill Thumbnail" style="width:40%">
+    <h4>Machine Learning</h4>
+  </div>
+  <div class="col-lg-4 col-md-6 col-sm-12 card">
+    <img src="blog-thumbnail.jpg" alt="Skill Thumbnail" style="width:40%">
+    <h4>Agile</h4>
+  </div>
+</div>
+
+
   <div class="row action-call">
     <div class="col-11">
       <h1>Let's work together!</h1>
       <p>I am available for projects big and small. Hire me to get your project done.</p>
     </div>
     <div class="col-1 button" >
-      <button>Hire me</button>
+      <a href="#contact-form"><button >Hire me</button></a>
     </div>
   </div>
 
@@ -68,10 +97,8 @@
  
 </div>
 <!-- MAIN (Center website) -->
-<div class="main projects">
-
-<h1>MYLOGO.COM</h1>
 <hr>
+<div class="main projects">
 
 <h2>Projects</h2>
 
@@ -154,6 +181,49 @@
 </div>
 
 <!-- END MAIN -->
+</div>
+<div class="row contact" id="contact-form">
+  <form class="col-12"action="/action_page.php">
+    <div class="row">
+      <div class="col-md-3 col-sm-12">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-12">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-12">
+        <label for="country">Country</label>
+      </div>
+      <div class="col">
+        <select id="country" name="country">
+          <option value="united-kingdom">United Kingdom</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-12">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
 </div>
 </div>
 <script>

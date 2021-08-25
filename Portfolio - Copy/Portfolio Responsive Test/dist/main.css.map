@@ -1,1 +1,1 @@
-{"version":3,"names":[],"mappings":"","sources":["main.scss"],"sourcesContent":["@import \"./gallery-view.scss\";\r\n@import \"./layout.scss\";\r\n"],"file":"main.css"}
+{"version":3,"names":[],"mappings":"","sources":["main.scss"],"sourcesContent":["@import \"./gallery-view.scss\";\r\n@import \"./layout.scss\";\r\n@import \"./blog-card.scss\";\r\n@import \"./contact.scss\";\r\n@import \"./skills-card.scss\";"],"file":"main.css"}

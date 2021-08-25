@@ -72,23 +72,69 @@ body {
 .action-call {
   background-color: black;
   color: white;
+  align-items: baseline;
 }
 .action-call .button {
-  padding-top: 50px;
+  margin: 0;
+  position: relative;
+  top: 50%;
 }
 
 .sub-div {
   margin: 0px 100px 0px 100px;
 }
 
-.skills .card {
+.contact {
+  background-color: whitesmoke;
+}
+
+.blog-selection .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 40%;
 }
-.skills .card:hover {
+.blog-selection .card:hover {
   box-shadow: 0 8px 16px 0 black;
 }
-.skills .container {
+.blog-selection .container {
   padding: 2px 16px;
+}
+
+.contact input[type=text], .contact select, .contact textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+.contact label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+.contact input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+.contact input[type=submit]:hover {
+  background-color: #45a049;
+}
+.contact .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.skills {
+  -ms-flex-align: center;
+}
+.skills .card {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }

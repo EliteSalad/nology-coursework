@@ -8,16 +8,6 @@
   /* Style the buttons */
 }
 
-.projects * {
-  box-sizing: border-box;
-}
-
-.projects body {
-  background-color: #f1f1f1;
-  padding: 20px;
-  font-family: Arial;
-}
-
 .projects .main {
   max-width: 1000px;
   margin: auto;
@@ -84,6 +74,77 @@ body {
   background-color: #f1f1f1;
   padding: 20px;
   font-family: Arial;
+}
+
+.blog-selection .row {
+  margin: 100px;
+}
+
+.action-call {
+  background-color: black;
+  color: white;
+  align-items: baseline;
+}
+
+.action-call .button {
+  margin: 0;
+  position: relative;
+  top: 50%;
+}
+
+.sub-div {
+  margin: 0px 100px 0px 100px;
+}
+
+.contact {
+  background-color: whitesmoke;
+}
+
+.blog-selection .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.blog-selection .card:hover {
+  box-shadow: 0 8px 16px 0 black;
+}
+
+.blog-selection .container {
+  padding: 2px 16px;
+}
+
+.contact input[type=text], .contact select, .contact textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.contact label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.contact input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+.contact input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.contact .row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /*# sourceMappingURL=main.css.map */

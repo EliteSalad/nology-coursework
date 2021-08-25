@@ -1,14 +1,14 @@
-.skills .card {
+.blog-selection .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 40%;
 }
 
-.skills .card:hover {
+.blog-selection .card:hover {
   box-shadow: 0 8px 16px 0 black;
 }
 
-.skills .container {
+.blog-selection .container {
   padding: 2px 16px;
 }
 

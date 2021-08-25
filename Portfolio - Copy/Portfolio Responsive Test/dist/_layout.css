@@ -15,14 +15,21 @@ body {
 .action-call {
   background-color: black;
   color: white;
+  align-items: baseline;
 }
 
 .action-call .button {
-  padding-top: 50px;
+  margin: 0;
+  position: relative;
+  top: 50%;
 }
 
 .sub-div {
   margin: 0px 100px 0px 100px;
+}
+
+.contact {
+  background-color: whitesmoke;
 }
 
 /*# sourceMappingURL=_layout.css.map */
