@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>blog layout test</title>
+    <link 
+    rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous"
+    />
+<link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+<div class="sub-div">
+  <div class="row action-call">
+    <div class="col-11">
+      <h1>Let's work together!</h1>
+      <p>I am available for projects big and small. Hire me to get your project done.</p>
+    </div>
+    <div class="col-1 button" >
+      <button>Hire me</button>
+    </div>
+  </div>
+
+  <div class="row blog-selection">
+
+    <div class="col-sm-12 col-md-4 card">
+      <img src="blog-thumbnail.jpg" alt="Blog Thumbnail" style="width:100%">
+      <div class="container">
+        <h4><b>Post 1</b></h4> 
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, 
+          perspiciatis, placeat repellendus soluta eum sapiente iure in id commodi 
+          deserunt laudantium quisquam maxime rerum eius fuga eaque rem pariatur tenetur?
+        </p> 
+        <p>Tags: Website / Javascript</p>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-4 card">
+      <img src="blog-thumbnail.jpg" alt="Blog Thumbnail" style="width:100%">
+      <div class="container">
+        <h4><b>Post 2</b></h4> 
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, 
+          perspiciatis, placeat repellendus soluta eum sapiente iure in id commodi 
+          deserunt laudantium quisquam maxime rerum eius fuga eaque rem pariatur tenetur?
+        </p> 
+        <p>Tags: Unity / C#</p>
+        
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-4 card">
+      <img src="blog-thumbnail.jpg" alt="Blog Thumbnail" style="width:100%">
+      <div class="container">
+        <h4><b>Post 3</b></h4> 
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, 
+          perspiciatis, placeat repellendus soluta eum sapiente iure in id commodi 
+          deserunt laudantium quisquam maxime rerum eius fuga eaque rem pariatur tenetur?
+        </p> 
+        <p>Tags: Direct X / C++</p>
+      </div>
+    </div>
+ 
+</div>
+<!-- MAIN (Center website) -->
+<div class="main projects">
+
+<h1>MYLOGO.COM</h1>
+<hr>
+
+<h2>Projects</h2>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('featured')"> Featured</button>
+  <button class="btn" onclick="filterSelection('unity')"> Unity</button>
+  <button class="btn" onclick="filterSelection('web')"> Web</button>
+  <button class="btn" onclick="filterSelection('C++')"> C++</button>
+  <button class="btn" onclick="filterSelection('all')"> Show all</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="col-sm-6 col-md-4 column unity featured">
+    <div class="content">
+      <img src="/w3images/mountains.jpg" alt="Unity Thumbnail" style="width:100%">
+      <h4>Project 1</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-4 column unity">
+    <div class="content">
+    <img src="/w3images/lights.jpg" alt="Unity Thumbnail" style="width:100%">
+      <h4>Project 2</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-4 column unity">
+    <div class="content">
+    <img src="/w3images/nature.jpg" alt="Unity Thumbnail" style="width:100%">
+      <h4>Project 3</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  
+  <div class="col-sm-6 col-md-4 column web featured">
+    <div class="content">
+      <img src="/w3images/cars1.jpg" alt="Web Thumbnail" style="width:100%">
+      <h4>Project 4</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-4 column web">
+    <div class="content">
+    <img src="/w3images/cars2.jpg" alt="Web Thumbnail" style="width:100%">
+      <h4>Project 5</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-4 column web">
+    <div class="content">
+    <img src="/w3images/cars3.jpg" alt="Web Thumbnail" style="width:100%">
+      <h4>Project 6</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-4 column C++ featured">
+    <div class="content">
+      <img src="/w3images/people1.jpg" alt="C++ Thumbnail" style="width:100%">
+      <h4>Project 7</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-4 column C++">
+    <div class="content">
+    <img src="/w3images/people2.jpg" alt="C++ Thumbnail" style="width:100%">
+      <h4>Project 8</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-4 column C++">
+    <div class="content">
+    <img src="/w3images/people3.jpg" alt="C++ Thumbnail" style="width:100%">
+      <h4>Project 9</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+</div>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
