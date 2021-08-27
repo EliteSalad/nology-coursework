@@ -11,19 +11,34 @@
     />
 <link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<!-- Font Awesome JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-  <div class=" row outter-div">
-  <div class=" col-1 ">
+  <div class=" outter-div">
+  <nav class="">
+    <div> </div>
     <div class="sidenav">
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#clients">Clients</a>
+<div class="col-12"><img src="images/skills/website.PNG" class="rounded mx-auto d-block" alt="Skill Thumbnail" style="width:100%"></div>
+<hr>
+    <a href="#about">About </a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#challenges">Coding Challenges</a>
+    <a href="#blog">Blog</a>
     <a href="#contact">Contact</a>
   </div>
-  </div>
-<div class="col-9 sub-div">
+</nav>
+
+
+<div class=" col-12 sub-div"> <!--col-9-->
   <div class="row hero-image">
     <div class=" col center-block text-center hero-text">
       <h1>I am Xavier Oliver</h1>
@@ -32,6 +47,8 @@
   </div>
 
 <div class="row about">
+  <h2 class=" col-12 page-title">About Me</h2>
+  <p class=" col-12 sub-title">Get to know me</p>
   <div class="col-lg-4 col-md-12">
     <img src="blog-thumbnail.jpg" alt="Skill Thumbnail" style="width:100%">
   </div>
@@ -45,6 +62,7 @@
       Ipsorm - Solution d'accompagnement en Revenue Management Hôtelier. 
       Optimisez votre chiffre d'affaire en maitrisant votre stratégie de e-distribution.
     </p>
+    <hr>
     <div class="row">
       <div class="col-lg-6 col-md-12">
         <h3>Name: Xavier Oliver</h3>
@@ -57,10 +75,10 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-3 col-sm-12">
+      <div class="col-lg-3 col-md-3 col-sm-12">
         <button>Download CV</button>
       </div>
-      <div class="col-lg-3 col-sm-12">
+      <div class="col-lg-3 col-md-3 col-sm-12">
         <button>See My Work</button>
       </div>
     </div>
@@ -68,7 +86,11 @@
 </div>
 
 <div class="skills row">
-  <div class="col-lg-4 col-md-6 col-sm-12 card center-block text-center">
+  <h2 class="col-12 page-title">My Skills</h2>
+  <p class=" col-12 sub-title">I am a creative problem solver. I build fullstack web and mobile applications; video games and video game engines. 
+    I use C#, C++, SQL, ASP.net, Javascript, Visual Basic, SDL, Direct X, Unity, Xamarin, Bootstrap, HTML and CSS
+  </p>
+  <div class="col-lg-3 col-md-6 col-sm-12 card center-block text-center">
     <img src="images/skills/website.PNG" class="rounded mx-auto d-block" alt="Skill Thumbnail" style="width:40%">
     <h4>Web Development</h4>
     <p>
@@ -76,15 +98,17 @@
       officia iusto aperiam aliquam quod perferendis delectus quis culpa, 
     </p>
   </div>
-  <div class="col-lg-4 col-md-6 col-sm-12 card center-block text-center">
-    <img src="images/skills/c-sharp.PNG" class="rounded mx-auto d-block" alt="Skill Thumbnail" style="width:40%">
+  <div class="col-lg-3 col-md-6 col-sm-12 card center-block text-center">
+    <!--<div class=inner-card>-->
+      <img src="images/skills/c-sharp.PNG" class="rounded mx-auto d-block" alt="Skill Thumbnail" style="width:40%">
     <h4>C# & C++</h4>
     <p>
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure nihil 
       officia iusto aperiam aliquam quod perferendis delectus quis culpa, 
     </p>
+  <!--</div>-->
   </div>
-  <div class="col-lg-4 col-md-6 col-sm-12 card center-block text-center">
+  <div class="col-lg-3 col-md-6 col-sm-12 card center-block text-center">
     <img src="images/skills/unity.svg" class="rounded mx-auto d-block" alt="Skill Thumbnail" style="width:40%">
     <h4>Unity</h4>
     <p>
@@ -92,7 +116,7 @@
       officia iusto aperiam aliquam quod perferendis delectus quis culpa, 
     </p>
   </div>
-  <div class="col-lg-4 col-md-6 col-sm-12 card center-block text-center">
+  <div class="col-lg-3 col-md-6 col-sm-12 card center-block text-center">
     <img src="images/skills/sql.PNG" class="rounded mx-auto d-block" alt="Skill Thumbnail" style="width:40%">
     <h4>Database</h4>
     <p>
@@ -100,7 +124,7 @@
       officia iusto aperiam aliquam quod perferendis delectus quis culpa, 
     </p>
   </div>
-  <div class="col-lg-4 col-md-6 col-sm-12 card center-block text-center">
+  <div class="col-lg-3 col-md-6 col-sm-12 card center-block text-center">
     <img src="images/skills/machine-learning2.jpg" class="rounded mx-auto d-block" alt="Skill Thumbnail" style="width:40%">
     <h4>Artificial intelligence</h4>
     <p>
@@ -108,7 +132,7 @@
       officia iusto aperiam aliquam quod perferendis delectus quis culpa, 
     </p>
   </div>
-  <div class="col-lg-4 col-md-6 col-sm-12 card center-block text-center">
+  <div class="col-lg-3 col-md-6 col-sm-12 card center-block text-center">
     <img src="images/skills/agile.png" class="rounded mx-auto d-block" alt="Skill Thumbnail" style="width:40%">
     <h4>Agile</h4>
     <p>
@@ -135,6 +159,8 @@
 <div class="main projects">
 
 <h2>Projects</h2>
+<p>Take a look at multi month projects that encoperate more than one skill set over the course of an 
+  <b>agile</b> development life cycle noth part of a team and solo</p>
 
 <div id="myBtnContainer">
   <button class="btn active" onclick="filterSelection('featured')"> Featured</button>
@@ -147,22 +173,25 @@
 <!-- Portfolio Gallery Grid -->
 <div class="row">
   <div class="col-sm-6 col-md-4 column unity featured">
-    <div class="content">
-      <img src="/w3images/mountains.jpg" alt="Unity Thumbnail" style="width:100%">
-      <h4>Project 1</h4>
-      <p>Lorem ipsum dolor..</p>
+    <div class="content ">
+      <div class="container">
+      <img src="images\projects\temp.jpg" class="image" alt="Unity Thumbnail" style="width:100%">
+      <div class="middle">
+        <div class="text">Welcome to mtvs cribs</div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="col-sm-6 col-md-4 column unity">
     <div class="content">
-    <img src="/w3images/lights.jpg" alt="Unity Thumbnail" style="width:100%">
+    <img src="images\projects\temp.jpg" alt="Unity Thumbnail" style="width:100%">
       <h4>Project 2</h4>
       <p>Lorem ipsum dolor..</p>
     </div>
   </div>
   <div class="col-sm-6 col-md-4 column unity">
     <div class="content">
-    <img src="/w3images/nature.jpg" alt="Unity Thumbnail" style="width:100%">
+    <img src="images\projects\temp.jpg" alt="Unity Thumbnail" style="width:100%">
       <h4>Project 3</h4>
       <p>Lorem ipsum dolor..</p>
     </div>
@@ -170,21 +199,21 @@
   
   <div class="col-sm-6 col-md-4 column web featured">
     <div class="content">
-      <img src="/w3images/cars1.jpg" alt="Web Thumbnail" style="width:100%">
+      <img src="images\projects\temp.jpg" alt="Web Thumbnail" style="width:100%">
       <h4>Project 4</h4>
       <p>Lorem ipsum dolor..</p>
     </div>
   </div>
   <div class="col-sm-6 col-md-4 column web">
     <div class="content">
-    <img src="/w3images/cars2.jpg" alt="Web Thumbnail" style="width:100%">
+    <img src="images\projects\temp.jpg" alt="Web Thumbnail" style="width:100%">
       <h4>Project 5</h4>
       <p>Lorem ipsum dolor..</p>
     </div>
   </div>
   <div class="col-sm-6 col-md-4 column web">
     <div class="content">
-    <img src="/w3images/cars3.jpg" alt="Web Thumbnail" style="width:100%">
+    <img src="images\projects\temp.jpg" alt="Web Thumbnail" style="width:100%">
       <h4>Project 6</h4>
       <p>Lorem ipsum dolor..</p>
     </div>
@@ -192,21 +221,21 @@
 
   <div class="col-sm-6 col-md-4 column C++ featured">
     <div class="content">
-      <img src="/w3images/people1.jpg" alt="C++ Thumbnail" style="width:100%">
+      <img src="images\projects\temp.jpg" alt="C++ Thumbnail" style="width:100%">
       <h4>Project 7</h4>
       <p>Lorem ipsum dolor..</p>
     </div>
   </div>
   <div class="col-sm-6 col-md-4 column C++">
     <div class="content">
-    <img src="/w3images/people2.jpg" alt="C++ Thumbnail" style="width:100%">
+    <img src="images\projects\temp.jpg" alt="C++ Thumbnail" style="width:100%">
       <h4>Project 8</h4>
       <p>Lorem ipsum dolor..</p>
     </div>
   </div>
   <div class="col-sm-6 col-md-4 column C++">
     <div class="content">
-    <img src="/w3images/people3.jpg" alt="C++ Thumbnail" style="width:100%">
+    <img src="images\projects\temp.jpg" alt="C++ Thumbnail" style="width:100%">
       <h4>Project 9</h4>
       <p>Lorem ipsum dolor..</p>
     </div>
@@ -215,7 +244,33 @@
 </div>
 </div>
 
+<div class="row challenges">
+  <h2 class="page-title">Coding Challenges</h2>
+  <hr>
+  <p>Take a look at smaller projects where I explore a new technique or design pattern 
+    <b>agile</b> development life cycle noth part of a team and solo</p>
+<div class="carousel owl-carousel">
+  <div class="card card-1">
+     A
+  </div>
+  <div class="card card-2">
+     B
+  </div>
+  <div class="card card-3">
+     C
+  </div>
+  <div class="card card-4">
+     D
+  </div>
+  <div class="card card-5">
+     E
+  </div>
+</div>
+</div>
+
+
 <div class="row blog-selection">
+  <h2 class="col-12 page-title">Blog</h2>
 
   <div class="col-sm-12 col-md-4 card">
     <img src="blog-thumbnail.jpg" alt="Blog Thumbnail" style="width:100%">
@@ -261,6 +316,7 @@
 
 
 <div class="row contact" id="contact-form">
+  <h2 class="col-12 page-title">Let's Talk</h2>
   <form class="col-12"action="/action_page.php">
     <div class="row">
       <div class="col-md-3 col-sm-12">
@@ -322,17 +378,22 @@
 </div>
 <hr>
 <div class="col">
-  <i class="far fa-calendar"></i>
-  <i class="fab fa-linkedin"></i>
-  <i class="far fa-envelope"></i>
-  <i class="fab fa-instagram"></i>
-  <i class="fas fa-blog"></i>
-  <i class="fab fa-github"></i>
+ <!--on hover make bigger highlight th color and show text-->
+  <a href="#" target="_blank" > <i class="far fa-calendar"></i></a>
+  <a href="https://www.linkedin.com/in/xavier-oliver-a756b6170/" target="_blank" ><i class="fab fa-linkedin"></i></a>
+  <a href="# " target="_blank" ><i class="far fa-envelope"></i></a>
+  <a href="https://www.youtube.com/user/xavmanisdabestest" target="_blank" ><i class="fab fa-youtube"></i></a>
+  <a href="https://instagram.com/EliteSalad" target="_blank" ><i class="fab fa-instagram"></i></a>
+  <a href="https://www.figma.com/files/recent?fuid=965329257080427007" target="_blank" ><i class="fas fa-blog "></i></a>
+  <a href="https://github.com/EliteSalad" target="_blank" ><i class="fab fa-github"></i></a>
+  <a href="https://www.figma.com/files/recent?fuid=965329257080427007" target="_blank" ><i class="fab fa-figma"></i></a>
+</div>
+
 </div>
 </div>
 </div>
 </div>
-</div>
+
 <script>
 filterSelection("all")
 function filterSelection(c) {
@@ -377,6 +438,29 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+$(".carousel").owlCarousel({
+           margin: 20,
+           loop: true,
+           autoplay: true,
+           autoplayTimeout: 2000,
+           autoplayHoverPause: true,
+           responsive: {
+             0:{
+               items:1,
+               nav: false
+             },
+             600:{
+               items:2,
+               nav: false
+             },
+             1000:{
+               items:3,
+               nav: false
+             }
+           }
+         });
+
 </script>
 
 </body>

@@ -1,6 +1,14 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-colour: #333;
+$secondary-colour: green;
+$black: black;
+$background-1: whitesmoke;
+$background-2: #f1f1f1;;
+
 
 * {
     box-sizing: border-box;
+    
   }
   
   body {
@@ -32,8 +40,29 @@
     margin: 0px 100px 0px 100px;
   }
 
+  .about{
+    background-color: $background-1;
+  }
+    .skills{
+      background-color: $background-2;
+    }
+
+.projects{
+  background-color: $background-1;
+  
+}
+  .challenges{
+    background-color: $background-2;
+  }
+  .blog{
+    background-color: $background-1;
+  }
+
   .contact{
-    background-color: whitesmoke;
+    background-color: $background-2;
+  }
+  .footer{
+    background-color: $background-1;
   }
   
   

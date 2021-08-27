@@ -1,4 +1,5 @@
 /* Center website */
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 .projects {
   /* Add padding BETWEEN each column */
   /* Create three equal columns that floats next to each other */
@@ -84,7 +85,31 @@ body {
   margin: 0px 100px 0px 100px;
 }
 
+.about {
+  background-color: whitesmoke;
+}
+
+.skills {
+  background-color: #f1f1f1;
+}
+
+.projects {
+  background-color: whitesmoke;
+}
+
+.challenges {
+  background-color: #f1f1f1;
+}
+
+.blog {
+  background-color: whitesmoke;
+}
+
 .contact {
+  background-color: #f1f1f1;
+}
+
+.footer {
   background-color: whitesmoke;
 }
 
@@ -127,6 +152,92 @@ body {
   content: "";
   display: table;
   clear: both;
+}
+
+.skills .card {
+  background-color: F1F1F1;
+}
+.skills .card .inner-card {
+  padding: 50px;
+  margin: 20px;
+}
+
+.fa-github {
+  color: #9c1de7;
+  transition: 0.3s;
+  opacity: 100%;
+}
+
+.fa-github:hover {
+  opacity: 60%;
+}
+
+.fa-calendar {
+  color: #34a853;
+  opacity: 100%;
+  transition: 0.3s;
+}
+
+.fa-github:hover {
+  opacity: 60%;
+}
+
+.fa-linkedin {
+  color: #0077b5;
+  opacity: 100%;
+  transition: 0.3s;
+}
+
+.fa-linkedin:hover {
+  opacity: 60%;
+}
+
+.fa-envelope {
+  color: #868686;
+}
+
+.fa-envelope:hover {
+  opacity: 60%;
+}
+
+.fa-youtube {
+  color: #ff0000;
+  opacity: 100%;
+  transition: 0.3s;
+}
+
+.fa-youtube:hover {
+  opacity: 60%;
+}
+
+.fa-instagram-square {
+  color: #fbbc05;
+  transition: 0.3s;
+  opacity: 100%;
+}
+
+.fa-instagram:hover {
+  opacity: 60%;
+}
+
+.fa-blog {
+  color: #e68523;
+  transition: 0.3s;
+  opacity: 100%;
+}
+
+.fa-blog:hover {
+  opacity: 60%;
+}
+
+.fa-figma {
+  color: #00a0dc;
+  transition: 0.3s;
+  opacity: 100%;
+}
+
+.fa-figma:hover {
+  opacity: 60%;
 }
 
 .hero-image {
@@ -186,4 +297,126 @@ body {
   .sidenav a {
     font-size: 18px;
   }
+}
+.wrapper {
+  width: 100%;
+}
+
+.carousel {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+.carousel .card {
+  color: #fff;
+  text-align: center;
+  margin: 20px 0;
+  line-height: 250px;
+  font-size: 90px;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel .card-1 {
+  background: #ed1c24;
+}
+
+.carousel .card-2 {
+  background: #0072bc;
+}
+
+.carousel .card-3 {
+  background: #39b54a;
+}
+
+.carousel .card-4 {
+  background: #f26522;
+}
+
+.carousel .card-5 {
+  background: #630460;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.owl-dot {
+  height: 15px;
+  width: 45px;
+  margin: 0 5px;
+  outline: none;
+  border-radius: 14px;
+  border: 2px solid #0072bc !important;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+  background: #0072bc !important;
+}
+
+.outter-div {
+  width: 60%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+/* CSS */
+.sidebar {
+  height: 200px;
+  width: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 40px;
+  background-color: lightblue;
+}
+
+.sidebar div {
+  padding: 8px;
+  font-size: 24px;
+  display: block;
+}
+
+.body-text {
+  margin-left: 150px;
+  font-size: 18px;
 }

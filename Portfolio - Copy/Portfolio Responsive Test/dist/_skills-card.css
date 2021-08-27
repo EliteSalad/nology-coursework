@@ -1,2 +1,10 @@
-/* No CSS */
+.skills .card {
+  background-color: F1F1F1;
+}
+
+.skills .card .inner-card {
+  padding: 50px;
+  margin: 20px;
+}
+
 /*# sourceMappingURL=_skills-card.css.map */

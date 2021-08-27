@@ -1,0 +1,79 @@
+.fa-github {
+  color: #9c1de7;
+  transition: 0.3s;
+  opacity: 100%;
+}
+
+.fa-github:hover {
+  opacity: 60%;
+}
+
+.fa-calendar {
+  color: #34a853;
+  opacity: 100%;
+  transition: 0.3s;
+}
+
+.fa-github:hover {
+  opacity: 60%;
+}
+
+.fa-linkedin {
+  color: #0077b5;
+  opacity: 100%;
+  transition: 0.3s;
+}
+
+.fa-linkedin:hover {
+  opacity: 60%;
+}
+
+.fa-envelope {
+  color: #868686;
+}
+
+.fa-envelope:hover {
+  opacity: 60%;
+}
+
+.fa-youtube {
+  color: #ff0000;
+  opacity: 100%;
+  transition: 0.3s;
+}
+
+.fa-youtube:hover {
+  opacity: 60%;
+}
+
+.fa-instagram-square {
+  color: #fbbc05;
+  transition: 0.3s;
+  opacity: 100%;
+}
+
+.fa-instagram:hover {
+  opacity: 60%;
+}
+
+.fa-blog {
+  color: #e68523;
+  transition: 0.3s;
+  opacity: 100%;
+}
+
+.fa-blog:hover {
+  opacity: 60%;
+}
+
+.fa-figma {
+  color: #00a0dc;
+  transition: 0.3s;
+  opacity: 100%;
+}
+
+.fa-figma:hover {
+  opacity: 60%;
+}
+
+/*# sourceMappingURL=_footer.css.map */

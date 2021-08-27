@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"_skills-card.min.css","sourcesContent":[]}
+{"version":3,"sources":["_skills-card.scss"],"names":[],"mappings":"AAAA,cACE,iBAAkB,OAGpB,0BACE,QAAS,KACT,OAAQ","file":"_skills-card.min.css","sourcesContent":[".skills{\r\n\r\n   .card{\r\n       background-color: F1F1F1;\r\n       .inner-card{\r\n        padding: 50px;       \r\n         margin:20px;\r\n       }\r\n   }\r\n}"]}
