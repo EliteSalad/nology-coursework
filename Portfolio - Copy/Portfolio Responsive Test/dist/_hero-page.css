@@ -1,4 +1,11 @@
 .hero-image {
+  position: relative;
+}
+
+.hero-image::before {
+  position: absolute;
+  content: "";
+  inset: 0;
   /* The image used */
   background-image: url("blog-thumbnail.jpg");
   /* Add the blur effect */
@@ -20,7 +27,7 @@
   color: white;
   font-weight: bold;
   border: 3px solid #f1f1f1;
-  z-index: 100;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=_hero-page.css.map */
