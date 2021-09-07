@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["_skills-card.scss"],"sourcesContent":[".skills{ \r\n  .card{padding: 0px; margin:40px;}\r\n  \r\n}"],"file":"_skills-card.css"}

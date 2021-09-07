@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["_about.scss"],"sourcesContent":[".about{\r\n//h1{\r\n  //color: $secondary-colour;\r\n//}\r\n.coloured{\r\n\r\ncolor: secondary-colour;\r\n}\r\n\r\n\r\n}"],"file":"_about.css"}

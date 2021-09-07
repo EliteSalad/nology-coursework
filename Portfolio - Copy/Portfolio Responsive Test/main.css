@@ -58,12 +58,23 @@
 
 * {
   box-sizing: border-box;
+  transition: 0.3s;
+}
+
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 body {
   background-color: #f1f1f1;
-  padding: 20px;
   font-family: Arial;
+}
+
+.outter-div {
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
 }
 
 .blog-selection .row {
@@ -71,46 +82,16 @@ body {
 }
 
 .action-call {
-  background-color: black;
-  color: white;
   align-items: baseline;
-}
-.action-call .button {
-  margin: 0;
-  position: relative;
-  top: 50%;
 }
 
 .sub-div {
   margin: 0px 100px 0px 100px;
 }
 
-.about {
-  background-color: whitesmoke;
-}
-
-.skills {
-  background-color: #f1f1f1;
-}
-
-.projects {
-  background-color: whitesmoke;
-}
-
-.challenges {
-  background-color: #f1f1f1;
-}
-
-.blog {
-  background-color: whitesmoke;
-}
-
-.contact {
-  background-color: #f1f1f1;
-}
-
-.footer {
-  background-color: whitesmoke;
+h1 h2 h3 h4 h5 {
+  margin-top: 20px;
+  margin: 10px;
 }
 
 .blog-selection .card {
@@ -155,11 +136,18 @@ body {
 }
 
 .skills .card {
-  background-color: F1F1F1;
+  padding: 0px;
+  margin: 40px;
 }
-.skills .card .inner-card {
-  padding: 50px;
-  margin: 20px;
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
 }
 
 .fa-github {
@@ -248,12 +236,12 @@ body {
   content: "";
   inset: 0;
   /* The image used */
-  background-image: url("blog-thumbnail.jpg");
+  background-image: url("images/me/Background.JPG");
   /* Add the blur effect */
   filter: blur(8px);
   -webkit-filter: blur(8px);
   /* Full height */
-  height: 25%;
+  height: 100%;
   /* Center and scale the image nicely */
   background-repeat: no-repeat;
   background-size: cover;
@@ -287,12 +275,12 @@ body {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #c0c0c0;
   display: block;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: #04AA6D;
 }
 
 @media screen and (max-height: 450px) {
@@ -366,10 +354,6 @@ body {
   background: #0072bc !important;
 }
 
-.outter-div {
-  width: 60%;
-}
-
 .image {
   opacity: 1;
   display: block;
@@ -425,4 +409,44 @@ body {
 .body-text {
   margin-left: 150px;
   font-size: 18px;
+}
+
+button {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.background-1 {
+  background-color: white;
+  border: 20px 20px 20px 20px blue;
+}
+
+.background-2 {
+  background-color: #c0c0c0;
+  border: 20px 20px 20px 20px red;
+}
+
+.font-color-secondary {
+  color: #04AA6D;
+}
+
+.font-on-black {
+  color: #c0c0c0;
+}
+
+.background-color-secondary {
+  background-color: #04AA6D;
+  color: white;
+}
+.background-color-secondary :hover {
+  color: #45a049;
+}
+
+.background-dark {
+  background-color: #111;
+  color: white;
 }

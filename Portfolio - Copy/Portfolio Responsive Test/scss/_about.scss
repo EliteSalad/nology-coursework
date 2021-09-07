@@ -1,0 +1,44 @@
+
+  button{
+    border:none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:16px;
+  }
+
+
+.background-1{
+  background-color: $background-1;
+  border: 20px 20px 20px 20px blue;
+}
+.background-2{
+  background-color: $background-2;
+  border: 20px 20px 20px 20px red;
+}
+
+.font-color-secondary{
+  color: $secondary-colour;
+}
+
+.font-on-black{
+  color: $font-on-black;
+}
+
+.background-color-secondary{
+  background-color: $secondary-colour;
+  color: $font-white;
+  
+  :hover{
+    color: $secondary-hover-colour;
+  }
+}
+
+.background-dark{
+  background-color: $background-dark;
+  color: $font-white;
+}
+
+
+

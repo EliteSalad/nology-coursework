@@ -1,0 +1,1 @@
+{"version":3,"sources":["_about.scss"],"names":[],"mappings":"AAAA,iBACE,MAAO","file":"_about.min.css","sourcesContent":[".about{\r\n//h1{\r\n  //color: $secondary-colour;\r\n//}\r\n.coloured{\r\n\r\ncolor: secondary-colour;\r\n}\r\n\r\n\r\n}"]}

@@ -28,32 +28,4 @@ body {
   margin: 0px 100px 0px 100px;
 }
 
-.about {
-  background-color: whitesmoke;
-}
-
-.skills {
-  background-color: #f1f1f1;
-}
-
-.projects {
-  background-color: whitesmoke;
-}
-
-.challenges {
-  background-color: #f1f1f1;
-}
-
-.blog {
-  background-color: whitesmoke;
-}
-
-.contact {
-  background-color: #f1f1f1;
-}
-
-.footer {
-  background-color: whitesmoke;
-}
-
 /*# sourceMappingURL=_layout.css.map */

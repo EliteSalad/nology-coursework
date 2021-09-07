@@ -1,0 +1,2 @@
+.hero-image{position:relative}.hero-image::before{position:absolute;content:"";inset:0;background-image:url(images/me/Background.JPG);filter:blur(8px);-webkit-filter:blur(8px);height:100%;background-repeat:no-repeat;background-size:cover}.hero-text{background-color:#000;background-color:rgba(0,0,0,.4);color:#fff;font-weight:700;border:3px solid #f1f1f1;z-index:2}
+/*# sourceMappingURL=_hero-page.min.css.map */
