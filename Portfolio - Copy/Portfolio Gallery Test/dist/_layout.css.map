@@ -1,1 +1,0 @@
-{"version":3,"names":[],"mappings":"","sources":["_layout.scss"],"sourcesContent":["\r\n* {\r\n    box-sizing: border-box;\r\n  }\r\n  \r\n  body {\r\n    background-color: #f1f1f1;\r\n    padding: 20px;\r\n    font-family: Arial;\r\n  }\r\n  "],"file":"_layout.css"}

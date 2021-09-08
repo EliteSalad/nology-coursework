@@ -1,1 +1,0 @@
-{"version":3,"names":[],"mappings":"","sources":["main.scss"],"sourcesContent":["@import \"./gallery-view.scss\";\r\n@import \"./layout.scss\";\r\n"],"file":"main.css"}

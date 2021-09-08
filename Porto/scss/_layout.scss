@@ -1,0 +1,102 @@
+$font-stack:    Helvetica, sans-serif;
+$font-white: white;
+$font-black: black;
+$font-on-black: #c0c0c0;
+$primary-colour: #333;
+//$secondary-colour: green;
+$secondary-colour: #04AA6D;
+$secondary-hover-colour: #45a049;
+$black: black;
+$background-dark: #111;
+$background-1: rgb(255, 255, 255);
+$background-2: #c0c0c0;;
+
+
+* {
+    box-sizing: border-box;
+    transition: 0.3s;
+  }
+  section{ 
+    padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+  
+  body {
+    background-color: #f1f1f1;
+    font-family: Arial;
+  }
+
+  .outter-div{
+width: 100%;
+overflow: hidden;
+margin: 0;
+  }
+
+  .blog-selection{
+    .h2{
+      padding-left:0px;
+      padding-right: 0px;
+    }
+    .row{
+      margin: 100px;
+    }
+  }
+
+  .action-call{
+    align-items: baseline;
+  }
+
+  .sub-div{
+    margin: 0px 100px 0px 100px;
+  }
+
+  h1, h2, h3, h4, h5{
+    margin-top: 20px;
+    margin: 10px;
+  }
+
+  button{
+    border:none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:16px;
+  }
+
+
+.background-1{
+  background-color: $background-1;
+  border: 20px 20px 20px 20px blue;
+}
+.background-2{
+  background-color: $background-2;
+  border: 20px 20px 20px 20px red;
+}
+
+.font-color-secondary{
+  color: $secondary-colour;
+}
+
+.font-on-black{
+  color: $font-on-black;
+}
+
+.background-color-secondary{
+  background-color: $secondary-colour;
+  color: $font-white;
+  
+  :hover{
+    color: $secondary-hover-colour;
+  }
+}
+
+.background-dark{
+  background-color: $background-dark;
+  color: $font-white;
+}
+
+  
+  
