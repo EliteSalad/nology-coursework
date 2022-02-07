@@ -1,0 +1,24 @@
+.hello {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    margin: auto;
+}
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+button {
+    margin-left: 10px;
+}
+.bg {
+    background-color: green;
+    color: #fff;
+}
+.bd {
+    border: 5px solid red;
+}

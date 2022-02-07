@@ -1,0 +1,55 @@
+/* .hello {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    margin: auto;
+} */
+.hello{
+    border:5px solid black;
+    background-color: white;
+    border-radius: 50%;
+    outline: 5px solid black;
+}
+
+.cell:hover{
+    background-color: yellow;
+}
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+button {
+    margin-left: 10px;
+}
+.bg {
+    background-color: green;
+    color: #fff;
+}
+.bd {
+    border: 5px solid red;
+}
+
+.player1{
+    background-color: red;
+}
+.player2{
+    background-color: yellow;
+}
+.unlocked{
+
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(7, 100px);
+    grid-template-rows: repeat(6, 100px);
+    width: 750px;
+    height: 650x;
+    justify-content: center;
+    background-color: black;
+}
+
