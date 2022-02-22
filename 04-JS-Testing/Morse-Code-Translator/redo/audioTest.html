@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+ 
+<button id="startButton">Start</button> 
+ 
+<script type="application/javascript"> 
+ 
+  function playNext() { 
+    if (audioPointer <audioArray.length) { 
+      audio = new Audio(audioArray[audioPointer]); 
+      audio.addEventListener("ended", playNext); 
+      audio.play(); 
+      console.log(`playing ${audioArray[audioPointer]}`); 
+      audioPointer += 1; 
+    } else { 
+      console.log("finished"); 
+    } 
+  } 
+		 
+  function onStart() { 
+    if (audio) { 
+      audio.pause(); 
+    } 
+    console.log("start"); 
+    audioPointer = 0; 
+    playNext(); 
+  } 
+		 
+		 
+  const startButton = document.getElementById("startButton"); 
+  startButton.addEventListener("click", onStart); 
+  const audioArray = [ 
+    "wave-sounds/single.wav",
+    "wave-sounds/single.wav", 
+    "wave-sounds/single.wav", 
+    "wave-sounds/single.wav", 
+    "wave-sounds/single.wav", 
+    "wave-sounds/single.wav", 
+    "wave-sounds/single.wav",   
+
+  ]; 
+  let audioPointer; 
+  let audio; 
+ 
+</script> 
+</body> 

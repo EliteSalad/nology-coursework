@@ -1,0 +1,10 @@
+.beer-container {
+  border: 1px solid lightgrey;
+  width: 300px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+.beer-container h3 {
+  color: red;
+}

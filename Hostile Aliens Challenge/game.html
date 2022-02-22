@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=button, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Fire();">Fire</button>
+    <!-- <div style=display: none;></div>Restart</div> -->
+
+<script>
+    
+    class Ship {
+
+constructor(names, maxHealth, damageTake) {
+    this.names=names;
+    this.maxHealth = maxHealth;
+    this.damageTake = damageTake;
+    this.currentHealth = maxHealth;
+    this.healthPercentage = 100;
+    this.healthStatus = "healthy"
+    this.alive = true;
+}
+
+TakeDamage() { 
+                  //why didn't overloding this work? //  TakeDamage(amount) 
+    this.ChangeHealth(this.damageTake);
+ }
+
+ChangeHealth(amount)
+{
+    this.currentHealth -= amount
+    this.CheckHealthPercentage()
+    this.CheckDeath()
+}
+
+ CheckDeath()
+ {
+     if((this.currentHealth<=0))
+     {
+        this.alive = false
+        this.currentHealth = 0;
+    }
+     else 
+     this.alive = true
+ }
+
+ Reset()
+ {
+     ChangeHealth(!this.maxHealth) 
+ }
+ 
+CheckHealthPercentage()
+{
+    this.healthPercentage = (this.currentHealth/this.maxHealth) * 100
+    this.Status();
+}
+
+Status() {
+    if(this.healthPercentage >= 100)
+    this.healthStatus = "healthy"
+    else if(this.healthPercentage > 75)
+    this.healthStatus = "lightly damaged"
+    else if(this.healthPercentage > 50)
+    this.healthStatus = "moderately damaged"
+    else if(this.healthPercentage > 25)
+    this.healthStatus = "heavily damaged"
+    else if(this.healthPercentage > 0)
+    this.healthStatus = "near death"
+    else if(this.healthPercentage <= 0)
+    this.healthStatus = "dead"
+
+    console.log(`The ${this.names} is ${this.healthStatus}`);
+} 
+}
+
+let ship = new Ship()[3]
+    let ship1 = new Ship("Mother ship", 100, 9)
+    let ship2 = new Ship("Defence ship", 80, 10)
+    let ship3= new Ship("Attack ship", 45, 12)
+    
+    console.log(ship1, ship2, ship3)
+    
+
+    function Fire() {
+        console.log(ship1.currentHealth);
+        console.log("fire");
+        ship1.TakeDamage();
+    }
+
+    //let shiplist //= ["motherShip", "defenceShips", "attackShips"]
+
+
+
+function Spawner(motherShips, defenceShips, attackShips) {
+    
+    Spawn(shiplist[0],1)
+    Spawn(shiplist[1],5)
+    Spawn(shiplist[2],8)
+    
+}
+
+function Spawn(ships, quantity)
+{
+    for (let index = 0; index < quantity; index++) {
+        //let tempArray[index] = new Ship()//ship1;
+        
+    }
+}
+
+function getRandomInt(max){
+return Math.floor(Math.random() * max)
+}
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code</title>
+    <link rel="stylesheet" href="morse.css">
+</head>
+<body>
+    <section class = "flex-container">
+
+        <h2>Morse Code Translator</h2>
+        <label>English</label>
+        <!-- <input id = "morse-input" class="morseInput" type="text" placeholder="input"/>
+        <textarea name="Text1" cols="20" rows="5"></textarea> -->
+        <textarea id = "morse-input" class="morseInput input" cols="20" rows="5" placeholder="input"></textarea>
+        <label>Morse</label>
+        <!-- <input id = "morse-output" class="morseOutput" type="text" placeholder="output"/> -->
+        <textarea id = "morse-output" class="morseOutput input" cols="20" rows="5" placeholder="input"></textarea>
+        <div class = "flex-button-container">
+          <button id = "btn-translate" class="btn-translate">Translate</button>
+          <button id = "btn-listen" class="btn-listen">Listen</button>
+        </div>
+        <div class = "flex-button-container">
+        <h3 >current sound:</h3>
+        <h3 id="currentSound">nothing</h3>
+      </div>
+
+      
+
+    </section>
+    
+    <script scr="morse.js">
+
+    </script>
+</body>
+</html>
