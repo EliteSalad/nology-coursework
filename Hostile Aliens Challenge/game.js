@@ -23,57 +23,210 @@
 // ▪ Each starts with 45 hit points
 // ▪ Each loses 12 hit points each time it is hit. 
 
-let playerName =''
-let inGame = true;
-let setup = true;
-
-while (inGame) {
-    //playerName = console.readline//("Enter string : ");
-    console.log(`input is ${playerName}`)
-}
-//reset game
-// enum healthStatus {
-// 	VALUE1, VALUE2, VALUE3
-// }
-
 class Ship {
 
     constructor(names, maxHealth, damageTake) {
         this.names=names;
         this.maxHealth = maxHealth;
         this.damageTake = damageTake;
-        this.currentHealth = health;
+        this.currentHealth = maxHealth;
         this.healthPercentage = 100;
         this.healthStatus = "healthy"
+        this.alive = true;
     }
-
+    
+    CopyConstructor(ship){
+        this.names=ship.names;
+        this.maxHealth = ship.maxHealth;
+        this.damageTake = ship.damageTake;
+        this.currentHealth = ship.maxHealth;
+        this.healthPercentage = 100;
+        this.healthStatus = "healthy"
+        this.alive = true;
+    
+    }
+    
     TakeDamage() { 
-        this.currentHealth -= this.damageTake;
-        healthPercentage = (this.currentHealth/this.maxHealth) * 100
+                      //why didn't overloding this work? //  TakeDamage(amount) 
+        this.ChangeHealth(this.damageTake);
      }
-
-    Status() {
-        if(this.healthPercentage < 100)
-        this.healthStatus = "lightly damaged"
-        else if(this.healthPercentage < 75)
-        this.healthStatus = "moderately damaged"
-        else if(this.healthPercentage < 50)
-        this.healthStatus = "heavily damaged"
-        else if(this.healthPercentage < 25)
-        this.healthStatus = "near death"
-    } 
-    method_3() { 
-
+    
+    ChangeHealth(amount)
+    {
+        this.currentHealth -= amount
+        this.CheckHealthPercentage()
+        this.CheckDeath()
     }
-  }
+    
+     CheckDeath()
+     {
+         if((this.currentHealth<=0))
+         {
+            this.alive = false
+            this.currentHealth = 0;
+        }
+         else 
+         this.alive = true
+     }
+    
+    ReturnState()
+    {
+    
+    return this.alive;
+    }
+    
+     Reset()
+     {
+         ChangeHealth(!this.maxHealth) 
+     }
+     
+    CheckHealthPercentage()
+    {
+        this.healthPercentage = (this.currentHealth/this.maxHealth) * 100
+        this.Status();
+    }
+    
+    Status() {
+        if(this.healthPercentage >= 100)
+        this.healthStatus = "healthy"
+        else if(this.healthPercentage > 75)
+        this.healthStatus = "lightly damaged"
+        else if(this.healthPercentage > 50)
+        this.healthStatus = "moderately damaged"
+        else if(this.healthPercentage > 25)
+        this.healthStatus = "heavily damaged"
+        else if(this.healthPercentage > 0)
+        this.healthStatus = "near death"
+        else if(this.healthPercentage <= 0)
+        this.healthStatus = "dead"
+    
+        console.log(`The ${this.names} is ${this.healthStatus}`);
+    } 
+    }
+    
 
-//   class Game {
-//       constructor(motherShips, defenceShips, attackShips)
-//       {
-//           this.motherShips = motherShips;
-//           this.defenceShips = defenceShips;
-//           this.attackShips = attackShips;
-//       }
 
-//       SpawnShips()
-//   }
+
+    
+    //let ship = new Ship()[3]
+        let ship1 = new Ship("Mother ship", 100, 9)
+        let ship2 = new Ship("Defence ship", 80, 10)
+        let ship3= new Ship("Attack ship", 45, 12)
+        let fireBtn = document.getElementById("fireBtn");
+        let restartBtn = document.getElementById("restartBtn");
+        let fireworkCanvas = document.getElementById("canvas");
+    
+        let shipGraveyard = new Array()
+            let shipsInGame = new Array();
+    
+        Setup();
+    
+        function Setup(){
+            restartBtn.disabled =   true;
+            fireBtn.disabled =   false;
+            let shipGraveyard = new Array()
+            let shipsInGame = new Array();
+    
+            HideUnhide(fireworkCanvas)
+        Spawn(ship1, 1);
+        Spawn(ship2, 5);
+        Spawn(ship3, 8);
+        }
+    
+    
+        
+    
+        function Fire() {
+            target = shipsInGame[getRandomInt(shipsInGame.length-1)]
+            console.log(target.currentHealth)
+            target.TakeDamage()
+            console.log(target.currentHealth)
+    
+    
+            console.log("fire");
+            shipsInGame[getRandomInt(shipsInGame.length-1)].TakeDamage();
+            RemoveTheDead()
+        }
+    
+        function HideUnhide(element)
+        {
+    
+      if (element.style.display === "none") {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
+        }
+    
+    function RemoveTheDead()
+    {
+        if(shipsInGame.length > 0)
+        {
+            for (let index = 0; index < shipsInGame.length; index++) {
+    
+                if(shipsInGame[index].healthStatus.includes("dead"))
+                {console.log("this ship dead")
+                shipGraveyard.push(shipsInGame[index])
+                shipsInGame.splice(index,1)
+                }
+                else
+                {
+                    console.log("this ship is still alive ")
+                }
+    
+    
+                
+            }
+            let motherShipIsAlive = false;
+            for (let index = 0; index < shipsInGame.length; index++) {
+                if(shipsInGame[index].names.includes(ship1.names))
+                {
+                    motherShipIsAlive = true
+                    console.log("mothership still alive")
+                }
+                else
+                {                
+    
+                }
+                }
+    
+                if (!motherShipIsAlive)
+                {
+                    fireBtn.disabled = true
+                    restartBtn.disabled =   false;
+                    console.log("mothership is dead")
+                    shipsInGame.forEach(element => {
+                        element.ChangeHealth(element.maxHealth)
+                        });
+                        HideUnhide(fireworkCanvas)
+                }
+    
+        }
+    
+        
+    
+    }
+    
+    function copyClassships()
+    {
+        let temp = JSON.stringify(ship1)
+        let copiedClass = temp.toString;
+    }
+    
+    function Spawn(ships, quantity)
+    {
+        let orginalArrayLength = shipsInGame.length;
+        console.log(orginalArrayLength)
+        for (let index = 0; index < quantity; index++) {
+    
+            shipsInGame[index + orginalArrayLength] = new Ship("Defaut", 0,0)
+            shipsInGame[index + orginalArrayLength].CopyConstructor(ships)//new Ship("Mother ship", 100, 9);
+            shipsInGame[index + orginalArrayLength].names += ' ' + index.toString()
+            
+        }
+        console.log(shipsInGame);
+    }
+    
+    function getRandomInt(max){
+    return Math.floor(Math.random() * max)
+    }

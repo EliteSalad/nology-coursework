@@ -5,13 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=button, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="game.css">
 </head>
 <body>
-    <button onclick="Fire();">Fire</button>
-    <!-- <div style=display: none;></div>Restart</div> -->
+    <audio src="sounds/space-background-music.mp3" controls>
+        <p>If you are reading this, it is because your browser does not support the audio element.</p>
+        </audio>
 
-<script>
-    
+    <div>
+        <canvas id="canvas"></canvas>
+    </div>
+<div id="btnHolder" class="btn-holder">
+<button id="fireBtn" class="button-class" onclick="Fire();">Fire</button>
+<button id="restartBtn" class="button-class" onclick="Setup();">Restart</button>
+
+</div>
+
+
+<script >
     class Ship {
 
 constructor(names, maxHealth, damageTake) {
@@ -22,13 +33,31 @@ constructor(names, maxHealth, damageTake) {
     this.healthPercentage = 100;
     this.healthStatus = "healthy"
     this.alive = true;
+    this.takeDamageSound = new Audio("sounds/hitMotherShip.mp3")
+}
+
+CopyConstructor(ship){
+    this.names=ship.names;
+    this.maxHealth = ship.maxHealth;
+    this.damageTake = ship.damageTake;
+    this.currentHealth = ship.maxHealth;
+    this.healthPercentage = 100;
+    this.healthStatus = "healthy"
+    this.alive = true;
+
 }
 
 TakeDamage() { 
                   //why didn't overloding this work? //  TakeDamage(amount) 
     this.ChangeHealth(this.damageTake);
+    this.PlayTakeDamageSound()
  }
 
+ PlayTakeDamageSound(){
+    if(this.names === "Mother ship 0")
+        this.takeDamageSound.play()
+
+ }
 ChangeHealth(amount)
 {
     this.currentHealth -= amount
@@ -42,10 +71,17 @@ ChangeHealth(amount)
      {
         this.alive = false
         this.currentHealth = 0;
+        console.log(`${this.names} has died`)
     }
      else 
      this.alive = true
  }
+
+ReturnState()
+{
+
+return this.alive;
+}
 
  Reset()
  {
@@ -76,38 +112,129 @@ Status() {
 } 
 }
 
-let ship = new Ship()[3]
+
+
+
+
+//let ship = new Ship()[3]
     let ship1 = new Ship("Mother ship", 100, 9)
     let ship2 = new Ship("Defence ship", 80, 10)
     let ship3= new Ship("Attack ship", 45, 12)
-    
-    console.log(ship1, ship2, ship3)
+    let fireBtn = document.getElementById("fireBtn");
+    let restartBtn = document.getElementById("restartBtn");
+    let fireworkCanvas = document.getElementById("canvas");
+    let fireSound = new Audio("sounds/laser-fire.mp3")
+
+    let shipGraveyard = new Array()
+        let shipsInGame = new Array();
+
+    Setup();
+
+    function Setup(){
+        restartBtn.disabled =   true;
+        fireBtn.disabled =   false;
+        let shipGraveyard = new Array()
+        let shipsInGame = new Array();
+        
+        HideUnhide(fireworkCanvas)
+    Spawn(ship1, 1);
+    Spawn(ship2, 5);
+    Spawn(ship3, 8);
+    }
+
+
     
 
     function Fire() {
-        console.log(ship1.currentHealth);
+        target = shipsInGame[getRandomInt(shipsInGame.length-1)]
+        console.log(`firing on ${target.names}`)
+        target.TakeDamage()
+        console.log(`${target.names} health is now ${target.currentHealth}`)
+        fireSound.play()
+
         console.log("fire");
-        ship1.TakeDamage();
+        shipsInGame[getRandomInt(shipsInGame.length-1)].TakeDamage();
+        RemoveTheDead()
     }
 
-    //let shiplist //= ["motherShip", "defenceShips", "attackShips"]
+    function HideUnhide(element)
+    {
+
+  if (element.style.display === "none") {
+    element.style.display = "block";
+  } else {
+    element.style.display = "none";
+  }
+    }
+
+function RemoveTheDead()
+{
+    if(shipsInGame.length > 0)
+    {
+        for (let index = 0; index < shipsInGame.length; index++) {
+
+            if(shipsInGame[index].healthStatus.includes("dead"))
+            {
+                console.log(`${shipsInGame[index].names} has been destroyed`)
+            shipGraveyard.push(shipsInGame[index])
+            shipsInGame.splice(index,1)
+            }
+            else
+            {
+
+            }
 
 
+            
+        }
+        let motherShipIsAlive = false;
+        for (let index = 0; index < shipsInGame.length; index++) {
+            if(shipsInGame[index].names.includes(ship1.names))
+            {
+                motherShipIsAlive = true
+                console.log("mothership still alive")
+            }
+            else
+            {                
 
-function Spawner(motherShips, defenceShips, attackShips) {
+            }
+            }
+
+            if (!motherShipIsAlive)
+            {
+                fireBtn.disabled = true
+                restartBtn.disabled =   false;
+                console.log("mothership is dead")
+                shipsInGame.forEach(element => {
+                    element.ChangeHealth(element.maxHealth)
+                    });
+                    HideUnhide(fireworkCanvas)
+            }
+
+    }
+
     
-    Spawn(shiplist[0],1)
-    Spawn(shiplist[1],5)
-    Spawn(shiplist[2],8)
-    
+
+}
+
+function copyClassships()
+{
+    let temp = JSON.stringify(ship1)
+    let copiedClass = temp.toString;
 }
 
 function Spawn(ships, quantity)
 {
+    let orginalArrayLength = shipsInGame.length;
+    console.log(orginalArrayLength)
     for (let index = 0; index < quantity; index++) {
-        //let tempArray[index] = new Ship()//ship1;
+
+        shipsInGame[index + orginalArrayLength] = new Ship("Defaut", 0,0)
+        shipsInGame[index + orginalArrayLength].CopyConstructor(ships)//new Ship("Mother ship", 100, 9);
+        shipsInGame[index + orginalArrayLength].names += ' ' + index.toString()
         
     }
+    console.log(shipsInGame);
 }
 
 function getRandomInt(max){
@@ -116,6 +243,8 @@ return Math.floor(Math.random() * max)
 
 
 
+
 </script>
+<script src="fireWorks.js"></script>
 </body>
 </html>
