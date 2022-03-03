@@ -23,210 +23,243 @@
 // ▪ Each starts with 45 hit points
 // ▪ Each loses 12 hit points each time it is hit. 
 
+
+
+
 class Ship {
 
     constructor(names, maxHealth, damageTake) {
-        this.names=names;
+        this.names = names;
         this.maxHealth = maxHealth;
         this.damageTake = damageTake;
         this.currentHealth = maxHealth;
         this.healthPercentage = 100;
         this.healthStatus = "healthy"
         this.alive = true;
+        this.takeDamageSound = new Audio("sounds/hitMotherShip.mp3")
     }
-    
-    CopyConstructor(ship){
-        this.names=ship.names;
+
+    copyConstructor(ship) {
+        this.names = ship.names;
         this.maxHealth = ship.maxHealth;
         this.damageTake = ship.damageTake;
         this.currentHealth = ship.maxHealth;
         this.healthPercentage = 100;
         this.healthStatus = "healthy"
         this.alive = true;
-    
+
     }
-    
-    TakeDamage() { 
-                      //why didn't overloding this work? //  TakeDamage(amount) 
-        this.ChangeHealth(this.damageTake);
-     }
-    
-    ChangeHealth(amount)
-    {
+
+    takeDamage() {
+        //why didn't overloding this work? //  TakeDamage(amount) 
+        this.changeHealth(this.damageTake);
+        this.playTakeDamageSound()
+    }
+
+    playTakeDamageSound() {
+        if (this.names === "Mother-ship 0")
+            this.takeDamageSound.play()
+
+    }
+    changeHealth(amount) {
         this.currentHealth -= amount
-        this.CheckHealthPercentage()
-        this.CheckDeath()
+        this.checkHealthPercentage()
+        this.checkDeath()
     }
-    
-     CheckDeath()
-     {
-         if((this.currentHealth<=0))
-         {
+
+    checkDeath() {
+        if ((this.currentHealth <= 0)) {
             this.alive = false
             this.currentHealth = 0;
+            console.log(`${this.names} has died`)
         }
-         else 
-         this.alive = true
-     }
-    
-    ReturnState()
-    {
-    
-    return this.alive;
+        else
+            this.alive = true
     }
-    
-     Reset()
-     {
-         ChangeHealth(!this.maxHealth) 
-     }
-     
-    CheckHealthPercentage()
-    {
-        this.healthPercentage = (this.currentHealth/this.maxHealth) * 100
-        this.Status();
+
+    returnState() {
+
+        return this.alive;
     }
-    
-    Status() {
-        if(this.healthPercentage >= 100)
-        this.healthStatus = "healthy"
-        else if(this.healthPercentage > 75)
-        this.healthStatus = "lightly damaged"
-        else if(this.healthPercentage > 50)
-        this.healthStatus = "moderately damaged"
-        else if(this.healthPercentage > 25)
-        this.healthStatus = "heavily damaged"
-        else if(this.healthPercentage > 0)
-        this.healthStatus = "near death"
-        else if(this.healthPercentage <= 0)
-        this.healthStatus = "dead"
-    
+
+    reset() {
+        changeHealth(!this.maxHealth)
+    }
+
+    checkHealthPercentage() {
+        this.healthPercentage = (this.currentHealth / this.maxHealth) * 100
+        this.status();
+    }
+
+    status() {
+        if (this.healthPercentage >= 100)
+            this.healthStatus = "healthy"
+        else if (this.healthPercentage > 75)
+            this.healthStatus = "lightly damaged"
+        else if (this.healthPercentage > 50)
+            this.healthStatus = "moderately damaged"
+        else if (this.healthPercentage > 25)
+            this.healthStatus = "heavily damaged"
+        else if (this.healthPercentage > 0)
+            this.healthStatus = "near death"
+        else if (this.healthPercentage <= 0)
+            this.healthStatus = "dead"
+
         console.log(`The ${this.names} is ${this.healthStatus}`);
-    } 
     }
-    
+}
 
+const setup = () => {
+    restartBtn.disabled = true;
+    fireBtn.disabled = false;
+    shipGraveyard = new Array()
+    shipsInGame = new Array();
 
+    hideUnhide(fireworkCanvas)
+    spawn(ship1, 1);
+    spawn(ship2, 5);
+    spawn(ship3, 8);
+}
 
-    
-    //let ship = new Ship()[3]
-        let ship1 = new Ship("Mother ship", 100, 9)
-        let ship2 = new Ship("Defence ship", 80, 10)
-        let ship3= new Ship("Attack ship", 45, 12)
-        let fireBtn = document.getElementById("fireBtn");
-        let restartBtn = document.getElementById("restartBtn");
-        let fireworkCanvas = document.getElementById("canvas");
-    
-        let shipGraveyard = new Array()
-            let shipsInGame = new Array();
-    
-        Setup();
-    
-        function Setup(){
-            restartBtn.disabled =   true;
-            fireBtn.disabled =   false;
-            let shipGraveyard = new Array()
-            let shipsInGame = new Array();
-    
-            HideUnhide(fireworkCanvas)
-        Spawn(ship1, 1);
-        Spawn(ship2, 5);
-        Spawn(ship3, 8);
-        }
-    
-    
-        
-    
-        function Fire() {
-            target = shipsInGame[getRandomInt(shipsInGame.length-1)]
-            console.log(target.currentHealth)
-            target.TakeDamage()
-            console.log(target.currentHealth)
-    
-    
-            console.log("fire");
-            shipsInGame[getRandomInt(shipsInGame.length-1)].TakeDamage();
-            RemoveTheDead()
-        }
-    
-        function HideUnhide(element)
-        {
-    
-      if (element.style.display === "none") {
+const fire = () => {
+    target = shipsInGame[getRandomInt(shipsInGame.length - 1)]
+    console.log(`firing on ${target.names}`)
+    target.takeDamage()
+    console.log(`${target.names} health is now ${target.currentHealth}`)
+    fireSound.play()
+
+    console.log("fire");
+    shipsInGame[getRandomInt(shipsInGame.length - 1)].takeDamage();
+    removeTheDead()
+}
+
+const hideUnhide = (element) => {
+
+    if (element.style.display === "none") {
         element.style.display = "block";
-      } else {
+    } else {
         element.style.display = "none";
-      }
-        }
-    
-    function RemoveTheDead()
-    {
-        if(shipsInGame.length > 0)
-        {
-            for (let index = 0; index < shipsInGame.length; index++) {
-    
-                if(shipsInGame[index].healthStatus.includes("dead"))
-                {console.log("this ship dead")
+    }
+}
+
+const removeTheDead = () => {
+    if (shipsInGame.length > 0) {
+        for (let index = 0; index < shipsInGame.length; index++) {
+
+            if (shipsInGame[index].healthStatus.includes("dead")) {
+                console.log(`${shipsInGame[index].names} has been destroyed`)
                 shipGraveyard.push(shipsInGame[index])
-                shipsInGame.splice(index,1)
-                }
-                else
-                {
-                    console.log("this ship is still alive ")
-                }
-    
-    
-                
+                shipsInGame.splice(index, 1)
             }
-            let motherShipIsAlive = false;
-            for (let index = 0; index < shipsInGame.length; index++) {
-                if(shipsInGame[index].names.includes(ship1.names))
-                {
-                    motherShipIsAlive = true
-                    console.log("mothership still alive")
-                }
-                else
-                {                
-    
-                }
-                }
-    
-                if (!motherShipIsAlive)
-                {
-                    fireBtn.disabled = true
-                    restartBtn.disabled =   false;
-                    console.log("mothership is dead")
-                    shipsInGame.forEach(element => {
-                        element.ChangeHealth(element.maxHealth)
-                        });
-                        HideUnhide(fireworkCanvas)
-                }
-    
+            else {
+
+            }
+
+
+
         }
+        let motherShipIsAlive = false;
+        for (let index = 0; index < shipsInGame.length; index++) {
+            if (shipsInGame[index].names.includes(ship1.names)) {
+                motherShipIsAlive = true
+                console.log("mothership still alive")
+            }
+            else {
+
+            }
+        }
+
+        if (!motherShipIsAlive) {
+            fireBtn.disabled = true
+            restartBtn.disabled = false;
+            console.log("mothership is dead")
+            shipsInGame.forEach(element => {
+                element.changeHealth(element.maxHealth)
+            });
+            hideUnhide(fireworkCanvas)
+        }
+
+    }
+
+
+
+}
+
+const copyClassships = () => {
+    let temp = JSON.stringify(ship1)
+    let copiedClass = temp.toString;
+}
+
+const spawn = (ships, quantity)  => { 
+    let orginalArrayLength = shipsInGame.length;
+    console.log(orginalArrayLength)
+
+    //create div grid container 
+    //  display: grid;
+    //grid-template-columns: auto auto auto auto ; asmany autos as quantity 
+    //padding: 10px
+    //grid-gap: 10px
+    //background color: whatever 
+
+    //create div give it row class
+
+    let row = document.createElement("div");
+    row.classList.add("grid-container")
+    row.classList.add(ships.names + quantity)
+    row.classList.add("row")
+    document.body.appendChild(row);
     
+
+    for (let index = 0; index < quantity; index++) {
         
-    
+
+        shipsInGame[index + orginalArrayLength] = new Ship("Defaut", 0, 0)
+        shipsInGame[index + orginalArrayLength].copyConstructor(ships)
+        shipsInGame[index + orginalArrayLength].names += ' ' + index.toString()
+
+        let instantiateShip = document.createElement("div");
+        instantiateShip.classList.add("grid-item");
+        instantiateShip.classList.add("col");
+        instantiateShip.innerHTML= shipsInGame[index + orginalArrayLength].names;
+        row.appendChild(instantiateShip);
+        //row.//DOCUMENT_NODE.//grid-template-columns: auto auto auto;
+        
+        //set columns to as many as quantity is 
+        //instantiate div for each new ship
+
     }
-    
-    function copyClassships()
-    {
-        let temp = JSON.stringify(ship1)
-        let copiedClass = temp.toString;
-    }
-    
-    function Spawn(ships, quantity)
-    {
-        let orginalArrayLength = shipsInGame.length;
-        console.log(orginalArrayLength)
-        for (let index = 0; index < quantity; index++) {
-    
-            shipsInGame[index + orginalArrayLength] = new Ship("Defaut", 0,0)
-            shipsInGame[index + orginalArrayLength].CopyConstructor(ships)//new Ship("Mother ship", 100, 9);
-            shipsInGame[index + orginalArrayLength].names += ' ' + index.toString()
-            
-        }
-        console.log(shipsInGame);
-    }
-    
-    function getRandomInt(max){
+
+
+    console.log(shipsInGame);
+}
+
+const getRandomInt = (max) => {
     return Math.floor(Math.random() * max)
-    }
+}
+
+
+
+
+//let ship = new Ship()[3]
+let visualRows = new Array();
+let ship1 = new Ship("Mother-ship", 100, 9)
+let ship2 = new Ship("Defence-ship", 80, 10)
+let ship3 = new Ship("Attack-ship", 45, 12)
+let fireBtn = document.getElementById("fireBtn");
+let restartBtn = document.getElementById("restartBtn");
+let fireworkCanvas = document.getElementById("canvas");
+let fireSound = new Audio("sounds/laser-fire.mp3")
+
+let shipGraveyard = new Array()
+let shipsInGame = new Array();
+
+setup();
+
+var catDiv = document.createElement("div");
+catDiv.innerHTML = "Test12";
+document.body.appendChild(catDiv);
+
+
+
+
+

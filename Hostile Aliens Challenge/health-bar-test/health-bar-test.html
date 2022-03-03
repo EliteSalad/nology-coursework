@@ -1,0 +1,46 @@
+<!-- .health-bar . when you subtract health that big of the bar goes white and animates down (i.e. neverwinter)
+
+Going to make it into like a little 8 bit character you can control, with sprites and hit points floating above health bar a-la Diablo3 or Metal Slug or any retro game.
+
+custom events for stuff like "hit" or whatever. Adding callbacks to character class etc. 
+
+animations on events e.g. hit => blinking white
+animations on walking
+
+Use some available available sprite sheet for .character class to make several.
+
+early days...
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="health-bar-test.css">
+    <script src="health-bar-test.js" defer ></script>
+</head>
+<body>
+    
+    <div class="health-bar" data-total="1000" data-value="1000">
+        <div class="bar">
+              <div class="hit"></div>
+        </div>
+      </div>
+      
+      <br />
+      
+      <button class="damage random">hit random</button>
+      <button class="reset">reset</button>
+      
+      <div class="log">
+        <div>What's going on...</div>
+      </div>
+
+</body>
+</html>
+
+  
+  <!-- some simple "code editor" where you can highlight lines of text/code one by one and edit the text. when you hold ctrl or something everything fades out a bit and you hover over lines to bring them to full opacity -->
