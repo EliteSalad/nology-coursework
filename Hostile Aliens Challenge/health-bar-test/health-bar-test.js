@@ -1,9 +1,9 @@
-$(document).ready(function(){
-    var hitBtn = $('button.damage'),
-        reset = $('button.reset'),
-        hBar = $('.health-bar'),
-        bar = hBar.find('.bar'),
-        hit = hBar.find('.hit');
+
+    var hitBtn = document.getElementsByClassName("damage random")[0],
+        reset = document.getElementsByClassName("reset")[0],
+        hBar = document.getElementsByClassName("health-bar")[0],
+        bar = document.getElementsByClassName("bar")[0],
+        hit = document.getElementsByClassName("hit")[0]
     
     hitBtn.on("click", function(){
       var total = hBar.data('total'),
@@ -46,7 +46,7 @@ $(document).ready(function(){
           bar.css('width', '100%');
           log("resetting health to 1000");
     });
-  });
+
   
   
   

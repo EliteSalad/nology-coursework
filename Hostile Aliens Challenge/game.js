@@ -109,6 +109,33 @@ class Ship {
     }
 }
 
+const createHealthbar = (domElement, setNames) =>{
+    var healthbar = document.createElement("div");
+    var bar = document.createElement("div");
+    var hit = document.createElement("div");
+    
+    healthbar.classList.add("health-bar");
+    healthbar.setAttribute('data-total',100)
+    healthbar.setAttribute('data-value',100)
+    healthbar.setAttribute('data-name',setNames)
+    bar.classList.add("bar");
+    hit.classList.add("hit");
+    
+    domElement.appendChild(healthbar);
+    healthbar.appendChild(bar);
+    bar.appendChild(hit);
+    }
+
+    const updateHealthbar = (nameString) =>{
+        var healthbar = document.querySelector(`[data-name="${nameString.names}"]`)
+        var hit = healthbar.querySelector('.hit')
+        hit.style.width = `${inversePercentage(nameString.healthPercentage)}%`;
+    }
+
+    const inversePercentage = (number) =>{
+        return 100 - number;
+    }
+
 const setup = () => {
     restartBtn.disabled = true;
     fireBtn.disabled = false;
@@ -127,6 +154,7 @@ const fire = () => {
     target.takeDamage()
     console.log(`${target.names} health is now ${target.currentHealth}`)
     fireSound.play()
+    updateHealthbar(target)
 
     console.log("fire");
     shipsInGame[getRandomInt(shipsInGame.length - 1)].takeDamage();
@@ -152,11 +180,7 @@ const removeTheDead = () => {
                 shipsInGame.splice(index, 1)
             }
             else {
-
             }
-
-
-
         }
         let motherShipIsAlive = false;
         for (let index = 0; index < shipsInGame.length; index++) {
@@ -177,31 +201,15 @@ const removeTheDead = () => {
                 element.changeHealth(element.maxHealth)
             });
             hideUnhide(fireworkCanvas)
+            resetVisuals()
         }
-
     }
-
-
-
 }
 
-const copyClassships = () => {
-    let temp = JSON.stringify(ship1)
-    let copiedClass = temp.toString;
-}
 
 const spawn = (ships, quantity)  => { 
     let orginalArrayLength = shipsInGame.length;
     console.log(orginalArrayLength)
-
-    //create div grid container 
-    //  display: grid;
-    //grid-template-columns: auto auto auto auto ; asmany autos as quantity 
-    //padding: 10px
-    //grid-gap: 10px
-    //background color: whatever 
-
-    //create div give it row class
 
     let row = document.createElement("div");
     row.classList.add("grid-container")
@@ -211,7 +219,6 @@ const spawn = (ships, quantity)  => {
     
 
     for (let index = 0; index < quantity; index++) {
-        
 
         shipsInGame[index + orginalArrayLength] = new Ship("Defaut", 0, 0)
         shipsInGame[index + orginalArrayLength].copyConstructor(ships)
@@ -222,10 +229,8 @@ const spawn = (ships, quantity)  => {
         instantiateShip.classList.add("col");
         instantiateShip.innerHTML= shipsInGame[index + orginalArrayLength].names;
         row.appendChild(instantiateShip);
-        //row.//DOCUMENT_NODE.//grid-template-columns: auto auto auto;
-        
-        //set columns to as many as quantity is 
-        //instantiate div for each new ship
+
+        createHealthbar(instantiateShip, shipsInGame[index + orginalArrayLength].names);
 
     }
 
@@ -237,8 +242,15 @@ const getRandomInt = (max) => {
     return Math.floor(Math.random() * max)
 }
 
-
-
+const resetVisuals = () => {
+    var el = document.getElementsByClassName("grid-container")
+    var length = el.length;
+    for (let index = 0; index < length; index++) {
+        console.log(el)
+        el[0].remove()
+    }
+    
+}
 
 //let ship = new Ship()[3]
 let visualRows = new Array();
@@ -255,11 +267,7 @@ let shipsInGame = new Array();
 
 setup();
 
-var catDiv = document.createElement("div");
-catDiv.innerHTML = "Test12";
-document.body.appendChild(catDiv);
-
-
-
-
+// var catDiv = document.createElement("div");
+// catDiv.innerHTML = "Test12";
+// document.body.appendChild(catDiv);
 
