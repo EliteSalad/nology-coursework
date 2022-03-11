@@ -78,7 +78,6 @@ class Ship {
     }
 
     returnState() {
-
         return this.alive;
     }
 
